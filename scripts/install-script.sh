@@ -168,12 +168,12 @@ function joomla() {
 }
 
 # Check if WordPress should be installed
-if [ "${CMS}" == "wordpress" ]; then
+if [ "${CMS}" == "Wordpress" ]; then
     wordpress
-elif [ "${CMS}" == "joomla" ]; then
+elif [ "${CMS}" == "Joomla" ]; then
     joomla
 else
-    echo "[SETUP] No CMS specified or unsupported CMS. Skipping CMS installation."
+    echo "[SETUP] No CMS specified. Skipping CMS installation."
 fi
 
 echo -e "[DONE] Everything has been installed successfully"
