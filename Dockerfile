@@ -49,7 +49,6 @@ RUN apt-get update && apt-get install -y \
         php${PHP_VERSION}-imap \
         php${PHP_VERSION}-inotify \
         php${PHP_VERSION}-intl \
-        php${PHP_VERSION}-json \
         php${PHP_VERSION}-ldap \
         php${PHP_VERSION}-mailparse \
         php${PHP_VERSION}-maxminddb \
@@ -88,7 +87,6 @@ RUN apt-get update && apt-get install -y \
         php${PHP_VERSION}-xmlwriter \
         php${PHP_VERSION}-xsl \
         php${PHP_VERSION}-zip \
-        php${PHP_VERSION}-zlib \
     && wget -q -O /tmp/composer.phar https://getcomposer.org/download/latest-stable/composer.phar \
     && SHA256=$(wget -q -O - https://getcomposer.org/download/latest-stable/composer.phar.sha256) \
     && echo "$SHA256 /tmp/composer.phar" | sha256sum -c - \
