@@ -1,1 +1,4 @@
+# Ignore build script
 build.sh
+# Ignore build output
+build_*.log

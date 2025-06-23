@@ -2,7 +2,7 @@
 
 # [SETUP] Install necessary packages, including git
 echo -e "[SETUP] Install packages"
-apt-get update && apt-get install -y git wget perl perl-doc fcgiwrap
+apt-get update && apt-get install -y git wget perl perl-doc fcgiwrap jq curl tar gzip
 
 # Change to server directory
 cd /mnt/server

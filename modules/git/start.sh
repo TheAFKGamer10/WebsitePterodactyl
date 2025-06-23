@@ -3,9 +3,12 @@ set -euo pipefail
 trap 'echo -e "${RED}[Git] Error on line $LINENO${NC}"' ERR
 
 # Color definitions
-BLUE='\033[0;34m'; BOLD_BLUE='\033[1;34m'
-WHITE='\033[0;37m'; GREEN='\033[0;32m'
-YELLOW='\033[0;33m'; RED='\033[0;31m'
+BLUE='\033[0;34m'
+BOLD_BLUE='\033[1;34m'
+WHITE='\033[0;37m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+RED='\033[0;31m'
 NC='\033[0m'
 
 # Header function
@@ -27,8 +30,11 @@ fi
 header "[Git] Checking & Updating Repository"
 
 # Ensure git is available
-command -v git > /dev/null 2>&1 \
-  || { echo -e "${RED}[Git] Git not installed; skipping.${NC}"; exit 0; }
+command -v git >/dev/null 2>&1 ||
+  {
+    echo -e "${RED}[Git] Git not installed; skipping.${NC}"
+    exit 0
+  }
 
 # Ensure target dir exists and is a repo
 if [[ ! -d "$GIT_DIR/.git" ]]; then
